@@ -1,5 +1,5 @@
 ﻿using System.Web.Http;
-using NETFramework.Web.CastleWindsor.Example.Scopes;
+using Cortlex.Rescope.CustomScope.Example;
 using NETFramework.Web.CastleWindsor.Example.Services;
 
 namespace NETFramework.Web.CastleWindsor.Example.Controllers

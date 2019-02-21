@@ -1,4 +1,4 @@
-﻿using NETFramework.Web.CastleWindsor.Example.Scopes;
+﻿using Cortlex.Rescope.CustomScope.Example;
 
 namespace NETFramework.Web.CastleWindsor.Example.Services
 {

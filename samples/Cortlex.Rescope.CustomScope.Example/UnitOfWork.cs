@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace AspNetCore.Web.Autofac.Default.Example.Scopes
+namespace Cortlex.Rescope.CustomScope.Example
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         public Guid Now { get; }
 

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using AspNetCore.Web.Autofac.Example.Scopes;
 using AspNetCore.Web.Autofac.Example.Services;
+using Cortlex.Rescope.CustomScope.Example;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCore.Web.Autofac.Example.Controllers

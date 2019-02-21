@@ -1,7 +1,7 @@
-﻿using Cortlex.Rescope.NETCore;
+﻿using Cortlex.Rescope.CustomScope.Example;
+using Cortlex.Rescope.NETCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NETCore.GenericHost.CoreDI.Example.Scopes;
 using NETCore.GenericHost.CoreDI.Example.Services;
 
 namespace NETCore.GenericHost.CoreDI.Example
@@ -21,7 +21,7 @@ namespace NETCore.GenericHost.CoreDI.Example
                     services.AddScoped<UnitOfWork>();
                     services.AddHostedService<HostedService>();
 
-                    services.AddScopes((provider, options) => { options.UseCoreDI(provider.GetService<IServiceScopeFactory>()); });
+                    services.AddRescope((provider, options) => { options.UseCoreDI(provider.GetService<IServiceScopeFactory>()); });
                     
                     services.AddSingleton<IDbScopeFactory, DbScopeFactory>();
                 })

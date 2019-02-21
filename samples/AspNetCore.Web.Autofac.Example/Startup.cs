@@ -1,11 +1,11 @@
 ﻿using System;
-using AspNetCore.Web.Autofac.Example.Scopes;
 using AspNetCore.Web.Autofac.Example.Services;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Cortlex.Rescope;
 using Cortlex.Rescope.Abstractions;
 using Cortlex.Rescope.Autofac;
+using Cortlex.Rescope.CustomScope.Example;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;

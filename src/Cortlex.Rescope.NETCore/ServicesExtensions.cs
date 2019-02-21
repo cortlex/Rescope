@@ -6,7 +6,7 @@ namespace Cortlex.Rescope.NETCore
 {
     public static class ServicesExtensions
     {
-        public static IServiceCollection AddScopes(this IServiceCollection services, Action<IServiceProvider, IScopeOptions> configure)
+        public static IServiceCollection AddRescope(this IServiceCollection services, Action<IServiceProvider, IScopeOptions> configure)
         {
             services.AddSingleton<IScopeOptions>(serviceProvider =>
             {

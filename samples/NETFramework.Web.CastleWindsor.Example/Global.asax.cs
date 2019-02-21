@@ -5,7 +5,7 @@ using Castle.Windsor;
 using Cortlex.Rescope;
 using Cortlex.Rescope.Abstractions;
 using Cortlex.Rescope.CastleWindsor;
-using NETFramework.Web.CastleWindsor.Example.Scopes;
+using Cortlex.Rescope.CustomScope.Example;
 using NETFramework.Web.CastleWindsor.Example.Services;
 
 namespace NETFramework.Web.CastleWindsor.Example

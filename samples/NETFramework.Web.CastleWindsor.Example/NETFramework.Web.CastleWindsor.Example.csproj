@@ -93,15 +93,11 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Scopes\DbScopeFactory.cs" />
-    <Compile Include="Scopes\DbTransactionalScope.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Scopes\IDbScopeFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ServiceA.cs" />
-    <Compile Include="Scopes\UnitOfWork.cs" />
     <Compile Include="WindsorCompositionRoot.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +121,10 @@
     <ProjectReference Include="..\..\src\Cortlex.Rescope\Cortlex.Rescope.csproj">
       <Project>{219de88f-6b46-4921-bc11-f8b911e72caa}</Project>
       <Name>Cortlex.Rescope</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cortlex.Rescope.CustomScope.Example\Cortlex.Rescope.CustomScope.Example.csproj">
+      <Project>{6d619990-b723-4c12-af43-787054c57af2}</Project>
+      <Name>Cortlex.Rescope.CustomScope.Example</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\Cortlex.Rescope.Autofac\Cortlex.Rescope.Autofac.csproj" />
     <ProjectReference Include="..\..\src\Cortlex.Rescope\Cortlex.Rescope.csproj" />
+    <ProjectReference Include="..\Cortlex.Rescope.CustomScope.Example\Cortlex.Rescope.CustomScope.Example.csproj" />
   </ItemGroup>
 
 </Project>

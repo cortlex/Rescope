@@ -1,6 +1,6 @@
 ﻿using Cortlex.Rescope.Abstractions;
 
-namespace AspNetCore.Web.Autofac.Default.Example.Scopes
+namespace Cortlex.Rescope.CustomScope.Example
 {
     public class DbScopeFactory: ScopeFactoryBase, IDbScopeFactory
     {
@@ -9,9 +9,14 @@ namespace AspNetCore.Web.Autofac.Default.Example.Scopes
             
         }
 
-        public DbTransactionalScope RequireDbTransactionalScope()
+        public IDbTransactionalScope RequireDbTransactionalScope()
         {
             return RequireScope("UnitOfWork", (tag, root, scope) => new DbTransactionalScope(tag, root, scope));
+        }
+
+        public IDbTransactionalScope BeginDbTransactionalScope()
+        {
+            return BeginScope("UnitOfWork", (tag, root, scope) => new DbTransactionalScope(tag, root, scope));
         }
     }
 }

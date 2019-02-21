@@ -1,10 +1,10 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Cortlex.Rescope.Autofac;
+using Cortlex.Rescope.CustomScope.Example;
 using Cortlex.Rescope.NETCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NETCore.GenericHost.Autofac.Example.Scopes;
 using NETCore.GenericHost.Autofac.Example.Services;
 
 namespace NETCore.GenericHost.Autofac.Example
@@ -25,7 +25,7 @@ namespace NETCore.GenericHost.Autofac.Example
                     services.AddScoped<UnitOfWork>();
                     services.AddHostedService<HostedService>();
 
-                    services.AddScopes((provider, options) => { options.UseAutofac(provider.GetService<ILifetimeScope>()); });
+                    services.AddRescope((provider, options) => { options.UseAutofac(provider.GetService<ILifetimeScope>()); });
 
                     services.AddSingleton<IDbScopeFactory, DbScopeFactory>();
                 }).ConfigureContainer<ContainerBuilder>((context, builder) =>

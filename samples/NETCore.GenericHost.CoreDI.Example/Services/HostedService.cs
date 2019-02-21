@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
+using Cortlex.Rescope.CustomScope.Example;
 using Microsoft.Extensions.Hosting;
-using NETCore.GenericHost.CoreDI.Example.Scopes;
 
 namespace NETCore.GenericHost.CoreDI.Example.Services
 {

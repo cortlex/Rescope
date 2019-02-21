@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Cortlex.Rescope.NETCore\Cortlex.Rescope.NETCore.csproj" />
+    <ProjectReference Include="..\Cortlex.Rescope.CustomScope.Example\Cortlex.Rescope.CustomScope.Example.csproj" />
   </ItemGroup>
 
 </Project>

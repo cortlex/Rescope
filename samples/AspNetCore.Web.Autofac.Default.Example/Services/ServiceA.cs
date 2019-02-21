@@ -1,4 +1,4 @@
-﻿using AspNetCore.Web.Autofac.Default.Example.Scopes;
+﻿using Cortlex.Rescope.CustomScope.Example;
 
 namespace AspNetCore.Web.Autofac.Default.Example.Services
 {

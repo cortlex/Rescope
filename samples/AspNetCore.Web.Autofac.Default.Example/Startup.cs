@@ -1,9 +1,9 @@
 ﻿using System;
-using AspNetCore.Web.Autofac.Default.Example.Scopes;
 using AspNetCore.Web.Autofac.Default.Example.Services;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Cortlex.Rescope.Autofac;
+using Cortlex.Rescope.CustomScope.Example;
 using Cortlex.Rescope.NETCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,7 +34,7 @@ namespace AspNetCore.Web.Autofac.Default.Example
             
             builder.RegisterType<DbScopeFactory>().As<IDbScopeFactory>().SingleInstance();
 
-            services.AddScopes((provider, options) => { options.UseAutofac(provider.GetService<ILifetimeScope>()); });
+            services.AddRescope((provider, options) => { options.UseAutofac(provider.GetService<ILifetimeScope>()); });
             
             builder.Populate(services);
             var container = builder.Build();

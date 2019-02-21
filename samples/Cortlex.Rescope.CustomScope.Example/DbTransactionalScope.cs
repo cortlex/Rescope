@@ -1,13 +1,13 @@
 ﻿using Cortlex.Rescope.Abstractions;
 
-namespace NETCore.GenericHost.CoreDI.Example.Scopes
+namespace Cortlex.Rescope.CustomScope.Example
 {
-    public class DbTransactionalScope: Scope
+    internal class DbTransactionalScope : Scope, IDbTransactionalScope
     {
         public DbTransactionalScope(string tag, bool isRoot, IInjectionScope injectionScope) : base(tag, isRoot, injectionScope)
         {
         }
 
-        public UnitOfWork UnitOfWork => Resolve<UnitOfWork>();
+        public IUnitOfWork UnitOfWork => Resolve<IUnitOfWork>();
     }
 }
