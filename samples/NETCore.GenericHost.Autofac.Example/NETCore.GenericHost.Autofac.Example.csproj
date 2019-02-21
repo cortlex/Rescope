@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.3.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Cortlex.Rescope.Autofac\Cortlex.Rescope.Autofac.csproj" />
+    <ProjectReference Include="..\..\src\Cortlex.Rescope.NETCore\Cortlex.Rescope.NETCore.csproj" />
+    <ProjectReference Include="..\..\src\Cortlex.Rescope\Cortlex.Rescope.csproj" />
+  </ItemGroup>
+
+</Project>
