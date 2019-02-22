@@ -27,9 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETCore.GenericHost.CoreDI.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETFramework.Web.CastleWindsor.Example", "samples\NETFramework.Web.CastleWindsor.Example\NETFramework.Web.CastleWindsor.Example.csproj", "{F006BB10-C9A9-4F04-86A7-78579769D2A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cortlex.Rescope.NETCore.Tests", "tests\Cortlex.Rescope.NETCore.Tests\Cortlex.Rescope.NETCore.Tests.csproj", "{B75B50F8-195A-47B8-B216-E19110CE73BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cortlex.Rescope.CustomScope.Example", "samples\Cortlex.Rescope.CustomScope.Example\Cortlex.Rescope.CustomScope.Example.csproj", "{6D619990-B723-4C12-AF43-787054C57AF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cortlex.Rescope.CustomScope.Example", "samples\Cortlex.Rescope.CustomScope.Example\Cortlex.Rescope.CustomScope.Example.csproj", "{6D619990-B723-4C12-AF43-787054C57AF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cortlex.Rescope.Tests", "tests\Cortlex.Rescope.Tests\Cortlex.Rescope.Tests.csproj", "{8108C5DC-57E0-44BF-8EF5-21C738A3ED15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,14 +73,14 @@ Global
 		{F006BB10-C9A9-4F04-86A7-78579769D2A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F006BB10-C9A9-4F04-86A7-78579769D2A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F006BB10-C9A9-4F04-86A7-78579769D2A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B75B50F8-195A-47B8-B216-E19110CE73BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B75B50F8-195A-47B8-B216-E19110CE73BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B75B50F8-195A-47B8-B216-E19110CE73BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B75B50F8-195A-47B8-B216-E19110CE73BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D619990-B723-4C12-AF43-787054C57AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6D619990-B723-4C12-AF43-787054C57AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D619990-B723-4C12-AF43-787054C57AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D619990-B723-4C12-AF43-787054C57AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8108C5DC-57E0-44BF-8EF5-21C738A3ED15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8108C5DC-57E0-44BF-8EF5-21C738A3ED15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8108C5DC-57E0-44BF-8EF5-21C738A3ED15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8108C5DC-57E0-44BF-8EF5-21C738A3ED15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,8 +95,8 @@ Global
 		{A0450352-686D-4C4F-A0A4-E5F6199395AA} = {7CFCE58F-9EFC-4A02-A205-B8D1F6429533}
 		{85F899F6-5B48-4F85-B337-93F7ECD2D844} = {7CFCE58F-9EFC-4A02-A205-B8D1F6429533}
 		{F006BB10-C9A9-4F04-86A7-78579769D2A9} = {7CFCE58F-9EFC-4A02-A205-B8D1F6429533}
-		{B75B50F8-195A-47B8-B216-E19110CE73BD} = {7AF7E42F-6B58-436F-BBAB-19D8286E3DDE}
 		{6D619990-B723-4C12-AF43-787054C57AF2} = {7CFCE58F-9EFC-4A02-A205-B8D1F6429533}
+		{8108C5DC-57E0-44BF-8EF5-21C738A3ED15} = {7AF7E42F-6B58-436F-BBAB-19D8286E3DDE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C1D57F63-3C97-4370-9CF6-40AFE96159EF}

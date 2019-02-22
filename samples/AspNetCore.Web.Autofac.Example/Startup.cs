@@ -30,7 +30,7 @@ namespace AspNetCore.Web.Autofac.Example
 
             var builder = new ContainerBuilder();
             builder.Populate(services);
-            builder.RegisterType<UnitOfWork>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<UnitOfWork>().As<UnitOfWork>().InstancePerLifetimeScope();
             builder.RegisterType<ServiceA>().AsSelf().InstancePerDependency();
             
             builder.RegisterType<DbScopeFactory>().As<IDbScopeFactory>().SingleInstance();

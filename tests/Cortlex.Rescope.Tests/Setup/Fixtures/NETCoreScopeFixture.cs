@@ -1,15 +1,14 @@
-﻿using System;
-using Cortlex.Rescope.CustomScope.Example;
+﻿using Cortlex.Rescope.CustomScope.Example;
+using Cortlex.Rescope.NETCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Cortlex.Rescope.NETCore.Tests.Setup
+namespace Cortlex.Rescope.Tests.Setup.Fixtures
 {
-    // ReSharper disable once InconsistentNaming
-    public class NETCoreDIScopeFixture: IDisposable
+    public class NETCoreScopeFixture : IScopeFactoryFixture
     {
-        public IServiceScope Scope;
+        private readonly IServiceScope _scope;
 
-        public NETCoreDIScopeFixture()
+        public NETCoreScopeFixture()
         {
             var services = new ServiceCollection();
 
@@ -18,12 +17,14 @@ namespace Cortlex.Rescope.NETCore.Tests.Setup
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             var serviceProvider = services.BuildServiceProvider();
-            Scope = serviceProvider.CreateScope();
+            _scope = serviceProvider.CreateScope();
         }
+
+        public IDbScopeFactory ScopeFactory => _scope.ServiceProvider.GetService<IDbScopeFactory>();
 
         public void Dispose()
         {
-            Scope?.Dispose();
+            _scope?.Dispose();
         }
     }
 }
