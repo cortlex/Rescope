@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  rescope.lib:
+    image: cortlex.rescope.tests
+    build:
+      context: .
+      dockerfile: tests/Cortlex.Rescope.Tests/Dockerfile 
+        entrypoint: dotnet test --logger trx --results-directory /var/temp
+    volumes:
+      - /opt/vsts/work/_temp:/var/temp
