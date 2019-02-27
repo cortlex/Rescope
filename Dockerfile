@@ -1,7 +1,7 @@
 FROM microsoft/dotnet:2.1-sdk AS build
 
 WORKDIR /
-COPY ./Cortlex.Rescope.sln /
+COPY ./Cortlex.Rescope.CI.sln /
 
 WORKDIR /src
 COPY src/Cortlex.Rescope/Cortlex.Rescope.csproj Cortlex.Rescope/
@@ -15,7 +15,6 @@ COPY samples/AspNetCore.Web.Autofac.Example/AspNetCore.Web.Autofac.Example.cspro
 COPY samples/Cortlex.Rescope.CustomScope.Example/Cortlex.Rescope.CustomScope.Example.csproj Cortlex.Rescope.CustomScope.Example/
 COPY samples/NETCore.GenericHost.Autofac.Example/NETCore.GenericHost.Autofac.Example.csproj NETCore.GenericHost.Autofac.Example/
 COPY samples/NETCore.GenericHost.CoreDI.Example/NETCore.GenericHost.CoreDI.Example.csproj NETCore.GenericHost.CoreDI.Example/
-COPY samples/NETFramework.Web.CastleWindsor.Example/NETFramework.Web.CastleWindsor.Example.csproj NETFramework.Web.CastleWindsor.Example/
 
 WORKDIR /tests
 COPY tests/Cortlex.Rescope.Tests/Cortlex.Rescope.Tests.csproj Cortlex.Rescope.Tests/
