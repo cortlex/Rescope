@@ -1,0 +1,9 @@
+version: '3.5'
+
+services:
+  rescope.build:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  rescope.test:
+    entrypoint: dotnet test --no-build

@@ -6,11 +6,6 @@ services:
       - ASPNETCORE_ENVIRONMENT=Production
 
   rescope.test:
-    entrypoint:
-      - dotnet
-      - test
-      - --no-build
-      - --logger
-      - trx;LogFileName=/tests/test-results.trx
+    entrypoint: dotnet test --no-build --logger trx --results-directory /var/temp/test-results
     volumes: 
-      - ${BUILD_ARTIFACTSTAGINGDIRECTORY:-./tests/}:/tests
+      - $(Build.ArtifactStagingDirectory)/test-results:/var/temp
