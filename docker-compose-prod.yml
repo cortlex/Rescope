@@ -8,4 +8,4 @@ services:
   rescope.test:
     entrypoint: dotnet test --no-build --logger trx --results-directory /var/temp/test-results
     volumes: 
-      - $(Build.ArtifactStagingDirectory):/var/temp
+      - /opt/vsts/work/_temp/test-results:/var/temp/test-results
