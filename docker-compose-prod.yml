@@ -8,6 +8,7 @@ services:
     entrypoint:
       - dotnet
       - test
+      - --no-build
       - --logger
       - trx;LogFileName=/tests/test-results.trx
     volumes: 
