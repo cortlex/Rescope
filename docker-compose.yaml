@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  rescope.build:
+    image: rescope.build
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+  rescope.test:
+    image: rescope.test
+    build:
+      context: .
+      dockerfile: Dockerfile      
+      target: test
