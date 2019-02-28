@@ -6,6 +6,8 @@ services:
       - ASPNETCORE_ENVIRONMENT=Production
 
   rescope.test:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
     entrypoint: dotnet test --no-build --logger trx --results-directory /var/temp/test-results
     volumes: 
       - /opt/vsts/work/_temp/test-results:/var/temp/test-results

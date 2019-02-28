@@ -6,4 +6,6 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
 
   rescope.test:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     entrypoint: dotnet test --no-build
