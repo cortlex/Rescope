@@ -8,7 +8,7 @@ COPY tests/ /tests
 COPY samples/ /samples
 
 RUN dotnet restore Cortlex.Rescope.CI.sln
-RUN dotnet build Cortlex.Rescope.CI.sln --no-restore
+RUN dotnet build Cortlex.Rescope.CI.sln --no-restore -c Release
 
 
 FROM build as test

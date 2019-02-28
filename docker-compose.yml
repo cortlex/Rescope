@@ -11,5 +11,5 @@ services:
     image: rescope.test
     build:
       context: .
-      dockerfile: Dockerfile      
+      dockerfile: Dockerfile
       target: test

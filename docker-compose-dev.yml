@@ -8,4 +8,4 @@ services:
   rescope.test:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-    entrypoint: dotnet test --no-build
+    entrypoint: dotnet test -c Release --no-build
