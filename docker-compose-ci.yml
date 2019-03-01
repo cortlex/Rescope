@@ -15,6 +15,6 @@ services:
   rescope.pack:
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-    entrypoint: ["bash", "/scripts/pack.entrypoint.sh", "${BUILD_NUMBER}"]
+    entrypoint: ["bash", "/scripts/pack.entrypoint.sh"]
     volumes: 
       - ${BUILD_ARTIFACT_STAGING_DIRECTORY}/pack:/var/temp/pack
