@@ -16,5 +16,6 @@ WORKDIR /tests/Cortlex.Rescope.Tests
 
 
 FROM build as pack
+WORKDIR /scripts
+RUN chmod +x pack.entrypoint.sh
 WORKDIR /
-RUN chmod +x /scripts/pack.entrypoint.sh
