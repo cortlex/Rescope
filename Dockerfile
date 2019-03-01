@@ -6,6 +6,7 @@ COPY Cortlex.Rescope.CI.sln /
 COPY src/ /src
 COPY tests/ /tests
 COPY samples/ /samples
+COPY scripts/ /scripts
 
 RUN dotnet restore Cortlex.Rescope.CI.sln
 RUN dotnet build Cortlex.Rescope.CI.sln --no-restore -c Release
