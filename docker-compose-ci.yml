@@ -15,6 +15,6 @@ services:
   rescope.pack:
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-    entrypoint: dotnet pack -c Release --no-build -o /var/temp/pack/Cortlex.Rescope
+    entrypoint: ["bash", "pack.entrypoint.sh"]
     volumes: 
       - ${BUILD_ARTIFACT_STAGING_DIRECTORY}/pack:/var/temp/pack/Cortlex.Rescope
