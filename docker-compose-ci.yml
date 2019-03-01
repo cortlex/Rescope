@@ -8,6 +8,11 @@ services:
   rescope.test:
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-    entrypoint: dotnet test -c Release --no-build --logger trx --results-directory /var/temp/test-results
     volumes: 
-      - /opt/vsts/work/_temp/test-results:/var/temp/test-results 
+      - ${BUILD_ARTIFACT_STAGING_DIRECTORY}/test-results:/var/temp/test-results
+
+  rescope.pack:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    volumes: 
+      - ${BUILD_ARTIFACT_STAGING_DIRECTORY}/pack:/var/temp/pack
