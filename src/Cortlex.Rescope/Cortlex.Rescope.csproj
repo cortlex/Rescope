@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Authors>mikhail.baleika@gmail.com</Authors>
+    <Company>Cortlex</Company>
+    <PackageLicenseUrl>https://github.com/cortlex/Rescope/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/cortlex/Rescope</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>dotnet scope</PackageTags>
+    <Version>1.0.1-alpha</Version>
+    <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
 
 </Project>
