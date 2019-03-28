@@ -11,12 +11,12 @@ namespace Cortlex.Rescope.CustomScope.Example
 
         public IDbTransactionalScope RequireDbTransactionalScope()
         {
-            return RequireScope("UnitOfWork", (tag, root, scope) => new DbTransactionalScope(tag, root, scope));
+            return RequireScope("UnitOfWork", (id, tag, scope) => new DbTransactionalScope(id, tag, scope));
         }
 
         public IDbTransactionalScope BeginDbTransactionalScope()
         {
-            return BeginScope("UnitOfWork", (tag, root, scope) => new DbTransactionalScope(tag, root, scope));
+            return BeginScope("UnitOfWork", (id, tag, scope) => new DbTransactionalScope(id, tag, scope));
         }
     }
 }

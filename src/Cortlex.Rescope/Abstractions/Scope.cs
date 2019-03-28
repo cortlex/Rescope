@@ -6,17 +6,18 @@ namespace Cortlex.Rescope.Abstractions
     public abstract class Scope: IScope
     {
         internal static readonly ScopeContext Context = new ScopeContext();
-        
-        protected bool IsRoot { get; }
 
+        protected Guid Id { get; }
         protected IInjectionScope InjectionScope { get; }
+        protected bool IsRoot => InjectionScope.ContextId == Id;
 
         public string Tag { get; }
 
-        protected Scope(string tag, bool isRoot, IInjectionScope injectionScope)
+        protected Scope(Guid id, string tag, IInjectionScope injectionScope)
         {
+            Id = id;
             Tag = tag;
-            IsRoot = isRoot;
+            
             InjectionScope = injectionScope;
 
             if (IsRoot)

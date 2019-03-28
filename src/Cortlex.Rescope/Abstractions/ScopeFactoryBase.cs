@@ -1,10 +1,12 @@
-﻿namespace Cortlex.Rescope.Abstractions
+﻿using System;
+
+namespace Cortlex.Rescope.Abstractions
 {
     public abstract class ScopeFactoryBase
     {
         private readonly IScopeOptions _options;
 
-        public delegate T ScopeFactory<out T>(string tag, bool isRoot, IInjectionScope injectionScope);
+        public delegate T ScopeFactory<out T>(Guid id, string tag, IInjectionScope injectionScope);
 
         protected ScopeFactoryBase(IScopeOptions options)
         {
@@ -15,7 +17,7 @@
         {
             var injectionScope = _options.InjectionScopeFactory.Create();
             
-            return scopeFactory(tag, true, injectionScope);
+            return scopeFactory(injectionScope.ContextId, tag, injectionScope);
         }
 
         protected T RequireScope<T>(string tag, ScopeFactory<T> scopeFactory) where T : Scope
@@ -23,11 +25,11 @@
             var contextId = Scope.Context.GetData(tag);
             if (contextId != null)
             {
-                return scopeFactory(tag, false, InjectionScopeBase.Scopes[contextId.Value]);
+                return scopeFactory(Guid.NewGuid(), tag, InjectionScopeBase.Scopes[contextId.Value]);
             }
 
             var scope = _options.InjectionScopeFactory.Create();
-            return scopeFactory(tag, true, scope);
+            return scopeFactory(scope.ContextId, tag, scope);
         }
     }
 }
