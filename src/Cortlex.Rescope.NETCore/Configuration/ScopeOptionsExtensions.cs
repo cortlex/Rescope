@@ -1,7 +1,7 @@
 ﻿using Cortlex.Rescope.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Cortlex.Rescope.NETCore
+namespace Cortlex.Rescope.NETCore.Configuration
 {
     public static class ScopeOptionsExtensions
     {

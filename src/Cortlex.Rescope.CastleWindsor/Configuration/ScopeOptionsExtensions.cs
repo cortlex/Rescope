@@ -1,7 +1,7 @@
 ﻿using Castle.MicroKernel;
 using Cortlex.Rescope.Abstractions;
 
-namespace Cortlex.Rescope.CastleWindsor
+namespace Cortlex.Rescope.CastleWindsor.Configuration
 {
     public static class ScopeOptionsExtensions
     {

@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Threading;
 
-namespace Cortlex.Rescope.Internal
+namespace Cortlex.Rescope
 {
     internal class ScopeContext
     {

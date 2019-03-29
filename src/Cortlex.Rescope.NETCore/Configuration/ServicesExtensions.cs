@@ -2,11 +2,11 @@
 using Cortlex.Rescope.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Cortlex.Rescope.NETCore
+namespace Cortlex.Rescope.NETCore.Configuration
 {
     public static class ServicesExtensions
     {
-        public static IServiceCollection AddRescope(this IServiceCollection services, Action<IServiceProvider, IScopeOptions> configure)
+        public static RescopeBuilder AddRescope(this IServiceCollection services, Action<IServiceProvider, IScopeOptions> configure)
         {
             services.AddSingleton<IScopeOptions>(serviceProvider =>
             {
@@ -14,7 +14,7 @@ namespace Cortlex.Rescope.NETCore
                 return ScopeOptions.Options;
             });
 
-            return services;
+            return new RescopeBuilder(services);
         }
     }
 }

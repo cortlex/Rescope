@@ -1,5 +1,4 @@
 ﻿using System;
-using Cortlex.Rescope.Internal;
 
 namespace Cortlex.Rescope.Abstractions
 {

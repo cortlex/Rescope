@@ -1,5 +1,6 @@
 ﻿using Cortlex.Rescope.CustomScope.Example;
 using Cortlex.Rescope.NETCore;
+using Cortlex.Rescope.NETCore.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Cortlex.Rescope.Tests.Setup.Fixtures

@@ -5,6 +5,7 @@ using Autofac.Extensions.DependencyInjection;
 using Cortlex.Rescope;
 using Cortlex.Rescope.Abstractions;
 using Cortlex.Rescope.Autofac;
+using Cortlex.Rescope.Autofac.Configuration;
 using Cortlex.Rescope.CustomScope.Example;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

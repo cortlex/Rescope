@@ -2,6 +2,7 @@
 using Castle.Windsor;
 using Cortlex.Rescope.Abstractions;
 using Cortlex.Rescope.CastleWindsor;
+using Cortlex.Rescope.CastleWindsor.Configuration;
 using Cortlex.Rescope.CustomScope.Example;
 
 namespace Cortlex.Rescope.Tests.Setup.Fixtures

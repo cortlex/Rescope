@@ -1,8 +1,10 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Cortlex.Rescope.Autofac;
+using Cortlex.Rescope.Autofac.Configuration;
 using Cortlex.Rescope.CustomScope.Example;
 using Cortlex.Rescope.NETCore;
+using Cortlex.Rescope.NETCore.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NETCore.GenericHost.Autofac.Example.Services;

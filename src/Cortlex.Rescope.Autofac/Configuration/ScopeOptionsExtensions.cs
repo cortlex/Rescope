@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using Cortlex.Rescope.Abstractions;
 
-namespace Cortlex.Rescope.Autofac
+namespace Cortlex.Rescope.Autofac.Configuration
 {
     public static class ScopeOptionsExtensions
     {
