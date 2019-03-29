@@ -9,7 +9,7 @@
     <RepositoryUrl>https://github.com/cortlex/Rescope</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>dotnet scope</PackageTags>
-    <Version>1.0.3-alpha</Version>
+    <Version>1.0.5-alpha</Version>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
 
