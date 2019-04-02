@@ -1,6 +1,10 @@
-﻿using Castle.MicroKernel.Registration;
+﻿using Castle.MicroKernel;
+using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.Resolvers.SpecializedResolvers;
 using Castle.Windsor;
+using Castle.Windsor.Installer;
+using Castle.Windsor.Proxy;
+using Cortlex.Rescope.CastleWindsor;
 using Cortlex.Rescope.Tests.Setup.Common;
 using Cortlex.Rescope.Tests.Setup.Fixtures;
 using Xunit;
@@ -18,7 +22,7 @@ namespace Cortlex.Rescope.Tests
         [Fact, Priority(0)]
         public void MultipleTypesWithCommonInterfaceShouldBeResolvedAsIEnumerable()
         {
-            var container = new WindsorContainer();
+            var container = new WindsorContainer(new DefaultKernel(new PropagateInlineDependenciesResolver(), new DefaultProxyFactory()), new DefaultComponentInstaller());
             container.Kernel.Resolver.AddSubResolver(new CollectionResolver(container.Kernel, true));
             container.Register(Component.For<IFoo>().ImplementedBy<FooImpl1>().LifestyleTransient());
             container.Register(Component.For<IFoo>().ImplementedBy<FooImpl2>().LifestyleTransient());

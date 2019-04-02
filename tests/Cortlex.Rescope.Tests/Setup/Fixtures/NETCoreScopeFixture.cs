@@ -16,6 +16,7 @@ namespace Cortlex.Rescope.Tests.Setup.Fixtures
             services.AddRescope((provider, options) => { options.UseCoreDI(provider.GetService<IServiceScopeFactory>()); });
             services.AddSingleton<IDbScopeFactory, DbScopeFactory>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IRepository, Repository>();
 
             var serviceProvider = services.BuildServiceProvider();
             _scope = serviceProvider.CreateScope();

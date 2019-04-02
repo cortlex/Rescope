@@ -1,7 +1,10 @@
 ﻿using System.Web.Http;
 using System.Web.Http.Dispatcher;
+using Castle.MicroKernel;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
+using Castle.Windsor.Installer;
+using Castle.Windsor.Proxy;
 using Cortlex.Rescope;
 using Cortlex.Rescope.Abstractions;
 using Cortlex.Rescope.CastleWindsor;
@@ -17,7 +20,7 @@ namespace NETFramework.Web.CastleWindsor.Example
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
-            var container = new WindsorContainer();
+            var container = new WindsorContainer(new DefaultKernel(new PropagateInlineDependenciesResolver(), new DefaultProxyFactory()), new DefaultComponentInstaller());
             container.Register(Classes.FromThisAssembly().BasedOn<ApiController>().LifestyleTransient());
             container.Register(Component.For<UnitOfWork>().LifestyleScoped<ScopeAccessor>());
             container.Register(Component.For<ServiceA>().LifestyleTransient());

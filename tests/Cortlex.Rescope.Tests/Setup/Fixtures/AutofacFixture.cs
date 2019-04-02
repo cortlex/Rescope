@@ -19,6 +19,7 @@ namespace Cortlex.Rescope.Tests.Setup.Fixtures
             var builder = new ContainerBuilder();
 
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
+            builder.RegisterType<Repository>().As<IRepository>().InstancePerLifetimeScope();
             builder.RegisterType<DbScopeFactory>().As<IDbScopeFactory>().SingleInstance();
 
             services.AddRescope((provider, options) => { options.UseAutofac(provider.GetService<ILifetimeScope>()); });
