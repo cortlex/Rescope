@@ -21,7 +21,7 @@ namespace Cortlex.Rescope.Tests
         [Fact, Priority(0)]
         public void RequireScopeShouldAttachToParentAsBeginScope()
         {
-            using (var scope1 = _fixture.ScopeFactory.BeginDbTransactionalScope())
+            using (var scope1 = _fixture.ScopeFactory.RequireDbTransactionalScope())
             {
                 using (var scope2 = _fixture.ScopeFactory.RequireDbTransactionalScope())
                 {
@@ -43,11 +43,11 @@ namespace Cortlex.Rescope.Tests
         }
 
         [Fact, Priority(0)]
-        public void BeginScopeShouldNotAttachToParentAsBeginScope()
+        public void DifferetnTagNamesShouldHaveDifferentScopes()
         {
-            using (var scope1 = _fixture.ScopeFactory.BeginDbTransactionalScope())
+            using (var scope1 = _fixture.ScopeFactory.RequireDbTransactionalScope("T1"))
             {
-                using (var scope2 = _fixture.ScopeFactory.BeginDbTransactionalScope())
+                using (var scope2 = _fixture.ScopeFactory.RequireDbTransactionalScope("T2"))
                 {
                     Assert.NotEqual(scope1.UnitOfWork, scope2.UnitOfWork);
                 }
@@ -59,7 +59,7 @@ namespace Cortlex.Rescope.Tests
         {
             using (var scope1 = _fixture.ScopeFactory.RequireDbTransactionalScope())
             {
-                using (var scope2 = _fixture.ScopeFactory.BeginDbTransactionalScope())
+                using (var scope2 = _fixture.ScopeFactory.RequireDbTransactionalScope("T1"))
                 {
                     Assert.NotEqual(scope1.UnitOfWork, scope2.UnitOfWork);
                 }
@@ -129,7 +129,7 @@ namespace Cortlex.Rescope.Tests
             {
                 Task.Run(() =>
                 {
-                    using (var scope2 = _fixture.ScopeFactory.BeginDbTransactionalScope())
+                    using (var scope2 = _fixture.ScopeFactory.RequireDbTransactionalScope("T1"))
                     {
                         beginScopeInTaskResetEvent.Set();
                         var uow2 = scope2.UnitOfWork;
@@ -158,7 +158,7 @@ namespace Cortlex.Rescope.Tests
             {
                 new Thread(new ThreadStart(() =>
                 {
-                    using (var scope2 = _fixture.ScopeFactory.BeginDbTransactionalScope())
+                    using (var scope2 = _fixture.ScopeFactory.RequireDbTransactionalScope("T1"))
                     {
                         beginScopeInTaskResetEvent.Set();
                         var uow2 = scope2.UnitOfWork;

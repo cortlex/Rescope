@@ -13,13 +13,6 @@ namespace Cortlex.Rescope.Abstractions
             _options = options;
         }
 
-        protected T BeginScope<T>(string tag, ScopeFactory<T> scopeFactory) where T : Scope
-        {
-            var injectionScope = _options.InjectionScopeFactory.Create();
-            
-            return scopeFactory(injectionScope.ContextId, tag, injectionScope);
-        }
-
         protected T RequireScope<T>(string tag, ScopeFactory<T> scopeFactory) where T : Scope
         {
             var contextId = Scope.Context.GetData(tag);

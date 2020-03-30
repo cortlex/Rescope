@@ -2,7 +2,6 @@
 {
     public interface IDbScopeFactory
     {
-        IDbTransactionalScope RequireDbTransactionalScope();
-        IDbTransactionalScope BeginDbTransactionalScope();
+        IDbTransactionalScope RequireDbTransactionalScope(string tagName = DbScopeFactory.DefaultScopeTag);
     }
 }

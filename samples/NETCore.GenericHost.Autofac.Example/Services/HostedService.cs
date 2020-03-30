@@ -16,11 +16,11 @@ namespace NETCore.GenericHost.Autofac.Example.Services
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            using (var scope = _dbScopeFactory.BeginDbTransactionalScope())
+            using (var scope = _dbScopeFactory.RequireDbTransactionalScope("T1"))
             {
                 var uow = scope.UnitOfWork;
 
-                using (var scope1 = _dbScopeFactory.BeginDbTransactionalScope())
+                using (var scope1 = _dbScopeFactory.RequireDbTransactionalScope())
                 {
                     var uow1 = scope1.UnitOfWork;
 
